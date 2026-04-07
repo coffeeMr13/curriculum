@@ -1,0 +1,351 @@
+/* filepath: c:\Users\Administrator\Desktop\code\yo\css\gimnasio.css */
+body {
+    margin: 20px;
+    padding: 0;
+    color: #333333;
+    background: linear-gradient(to bottom, #333, #000);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    width: 99%;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-radius: 13px;
+    box-shadow: 0 0 55px #101010;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: #4169e1bf;
+    backdrop-filter: blur(4px);
+}
+
+.link {
+    text-decoration: none;
+    color: #ffd971;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.25s ease;
+}
+
+.dropdown-content {
+    margin-top: 8px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 1.25s ease;
+}
+
+details[open] .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown {
+    position: relative;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #F4511E;
+    font-size: 1em;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.link:hover {
+    color: #ebe7e7;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    transform: scale(1.08);
+    transition: color 0.3s ease;
+}
+
+details {
+    position: relative;
+}
+
+.hobby-table {
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 8px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 150px;
+    height: 162px;
+}
+
+.hobby-table td {
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-align: start;
+    overflow: hidden;
+}
+
+.hobby-table td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-content {
+    backdrop-filter: blur(4px);
+    transform-origin: 10% 0%;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: rgba(80, 78, 78, 0.804);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.731);
+    border-radius: 8px;
+    margin-top: 13px;
+    overflow: hidden;
+    transition: all 0.6s;
+    backdrop-filter: sepia(90%);
+}
+
+.hobby-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- ESTILOS DEL MODAL DE CONTACTO --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 3000; /* Por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px); 
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #ff9900;
+    width: 85%;
+    max-width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #e99a24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+.hobby-table tr:hover {
+    background-color: #bbb;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-variant: normal;
+    font-size: 300%;
+    color: #4169e1;
+    text-shadow: #000 1px 1px 4px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 100px #ffff89);
+}
+
+.logo {
+    padding: 1px;
+    display: block;
+    margin: 1px auto;
+    width: 100px;
+    height: auto;
+}
+
+.Style1 {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #CD5C5C;
+    text-shadow: #000 1px 1px 4px;
+    text-align: default;
+    margin-left: 20px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #CD5C5C;
+    text-shadow: #000 1px 1px 4px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.gym-image {
+    text-align: left;
+    margin-top: 30px;
+    height: auto;
+    width: 25%;
+}
+
+.gym-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #000;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.text-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 2px;
+    text-justify: justify;
+}
+
+.text-gym {
+    width: 60%;
+    color: #f0f0f0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.gym-image {
+    position: relative;
+    width: 400px; /* Ajusta al tamaño deseado */
+    height: 550px ; /* Ajusta al tamaño deseado */
+}
+
+.gym-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease; /* Duración de la transición */
+}
+
+/* La imagen de abajo siempre está visible, pero tapada por la de arriba */
+.img-bottom {
+    z-index: 0;
+}
+
+/* La imagen de arriba (top) tiene prioridad */
+.img-top {
+    z-index: 1;
+    opacity: 1;
+}
+
+/* Al pasar el mouse por el contenedor, la imagen de arriba se vuelve invisible */
+.gym-image:hover .img-top {
+    opacity: 0;
+}
+@media (min-width: 427px) and (max-width: 800px) {
+    .text-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+.text-gym {
+    width: 60%;
+    color: #f0f0f0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gym-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease; /* Duración de la transición */
+}
+}
+
+
+@media (max-width: 800px) {
+    .text-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gym-image {
+        width: 104%;
+    }
+
+    .text-gym {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .box {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}

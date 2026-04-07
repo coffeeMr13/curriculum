@@ -1,0 +1,726 @@
+body {
+            margin: 20px;
+            padding: 0;
+            color: #333333;
+            background: linear-gradient(to bottom, #333, #000);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+.box {
+            width: 99%;
+            margin: 20px auto;
+            background-color: #ff9900;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around; /* Mejor que space-between para menús */
+            align-items: flex-start; /* Alinea los items arriba */
+            border-radius: 13px;
+            box-shadow: 0 0 55px #101010;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            background-color:#ff9900bf; /* Un poco transparente */
+            backdrop-filter: blur(4px); /* Efecto borroso estilo iOS/Windows 11 */
+        }
+
+        .link {
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.25s ease;
+        }
+
+        /* Contenido oculto */
+.dropdown-content {
+    margin-top: 8px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 1.25s ease;
+}
+
+.linr {
+    color: #333;
+    cursor: pointer;
+    transition: all 22;
+    }
+
+
+/* Cuando está abierto */
+details[open] .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+        .dropdown {
+    position: relative;
+        }
+        summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            font-size:1em;
+        }
+        summary::-webkit-details-marker {
+    display: none;
+        }
+.link:hover {
+    color: #ebe7e7;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    transform: scale(1.08);
+    transform: color 0.3s ease;
+}
+
+        /* Estilos específicos para la tabla desplegable */
+        details {
+            position: relative;
+        }
+
+        .hobby-table {
+            margin-top: 10px;
+            background: #fff;
+            border-radius: 8px;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .hobby-table td {
+    padding: 0; 
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-align: left;
+    overflow: hidden;
+    }
+    .hobby-table td a {
+    display: block;  /* Hace que el enlace sea un bloque solido */
+    width: 100%;     /* Ocupa todo el ancho */
+    height: 100%;    /* Ocupa todo el alto */
+    padding: 12px;   /* Ponemos el padding AQUÍ en lugar de en el td */
+    text-decoration: none; /* Quita el subrayado si lo tiene */
+    color: inherit;  /* Hereda el color del texto */
+    }
+/* --- ESTILOS DEL MODAL DE CONTACTO --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 3000; /* Por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); 
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #ff9900;
+    width: 85%;
+    max-width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #e99a24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+        /* Quitar la flecha por defecto de Chrome/Safari (opcional) */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Contenedor del desplegable */
+.dropdown {
+    position: relative; /* Necesario para que el hijo se posicione respecto a esto */
+    display: inline-block;
+}
+
+/* La caja que contiene la tabla */
+.dropdown-content {
+    backdrop-filter: blur(4px); /* Efecto borroso */
+    transform-origin: 10% 0%; /* Punto de origen para animaciones */
+    position: absolute;  /* Hace que flote delante */
+    top: 100%;           /* Aparece justo debajo del texto 'Hobbys' */
+    left: 10%;           /* Lo centramos respecto al texto */
+    transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
+    z-index: 100;        /* Asegura que esté por encima de todo */
+    background-color: rgba(80, 78, 78, 0.804);
+    min-width: 150px;    /* Ancho mínimo de la tablita */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.731);
+    border-radius: 8px;
+    margin-top: 13px;    /* Separación de la barra naranja */
+    overflow: hidden;    /* Para que los bordes redondeados corten la tabla */
+    transition: all 0.6s;
+    backdrop-filter: sepia(90%);
+}
+
+/* Estilo de la tabla interna */
+.hobby-table {
+    width: 100%;
+    border-collapse: collapse;
+    backdrop-filter: blur(4px);
+}
+
+.hobby-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-align: left;
+    overflow: hidden;
+}
+
+.hobby-table tr:last-child td {
+    border-bottom: none;
+
+}
+
+/* Opcional: cambio de color al pasar el mouse por cada hobby */
+.hobby-table tr:hover {
+    border-radius: 8px;
+    background-color: #bbb;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.text {
+    max-width: 50%;
+    margin: 0 auto 30px auto;
+    text-align:left;
+    padding: 1px;
+    color: #fff;
+    width: 50%;
+    margin: 40px auto;
+    background-color: #ff990000;
+    padding: 20px;
+    border-radius: 23px;
+    box-shadow: 0 0 50px #111;
+    text-align: justify;
+    font-size: 1.02em;
+    text-wrap: pretty;
+}
+h1 {
+    font-variant: normal;
+    font-size: 300%;
+    color: #ff9800;
+    text-shadow: #000 1px 1px 4px;
+    text-align: center;
+    text-wrap: balance;
+}
+.logo:hover {
+    
+    transform: scale(1.2); /* Efecto de crecimiento */
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 100px #ffff89);
+}
+.logo {
+    padding: 1px;
+    display: block;
+    margin: 1px auto;
+    width: 100px;
+    height: auto;
+    
+}
+h2 {
+    font-size: 1.5em;
+    color: #CD5C5C;
+    text-shadow: #000 1px 1px 4px;
+    text-align: default;
+    margin-left: 20px;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h3 {
+    font-size: 1.3em;
+    color: #CD5C5C;
+    text-shadow: #000 1px 1px 4px;
+    text-align: center;
+    margin-left: 20px;
+    padding: 10px;
+}
+.sombra-organica {
+    margin-left: 60px;
+    border-left: 6px solid #CD5C5C;
+    padding-left: 15px;
+    font-family: sans-serif; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: white;
+    width: 30%;
+    height: 20px auto;
+    text-align: justify;
+}
+
+
+.movil-text {
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+/* Estilo del contenedor "Movil" */
+.movil {
+    background-color: #e99a24; /* Naranja para contraste */
+    width: 85%;
+    max-width: 400px; /* Limite de ancho para que no se vea enorme en PC */
+    margin: 13px auto;
+    padding: 13px;
+    border-radius: 13px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); /* Sombra más moderna */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Estilos de las Imágenes y Video */
+.media-item {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none; /* Por defecto ocultos */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Clase para mostrar el elemento actual */
+.media-item.active {
+    display: block;
+}
+
+/* Estilos del Botón Original */
+.controls {
+    margin-top: 15px;
+}
+
+#action-btn {
+    background-color: #CD5C5C;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+#action-btn:hover {
+    background-color: #b04c4c;
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+#status-text {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* El contenedor principal: Un cuadrado con rejilla 2x2 */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    grid-template-rows: 1fr 1fr;    /* 2 filas iguales */
+    gap: 10px;                      /* Espacio entre imágenes */
+    width: 75%;                   /* Ancho del cuadrado total */
+    height: 80%;                  /* Alto del cuadrado total */
+    margin: 0 auto;                 /* Centrado en la página */
+    position: relative;
+}
+
+/* Estilo de cada tarjeta individual */
+.tarjeta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px; /* Bordes redondeados opcional */
+    cursor: pointer; /* Manito para indicar que se puede clicar */
+    /* Transición suave para cuando se agranda y se achica */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Estilo de las imágenes */
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* La imagen cubre todo sin deformarse */
+    transition: transform 0.4s ease;
+    backface-visibility: hidden;
+}
+
+/* El Texto Descriptivo (Oculto por defecto) */
+.descripcion {
+    position: absolute;
+    bottom: -50px; /* Escondido abajo */
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.59); /* Fondo negro semitransparente */
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0.1s;
+    z-index: 25;
+}
+
+
+/* Al pasar el mouse por encima de una tarjeta */
+.tarjeta.activa {
+    /* Truco para que ocupe todo el contenedor */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Se pone por encima de las otras */
+    transform: scale(0.9); /* Un pequeño "pop" extra */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border-radius: 12px
+}
+
+/* Efecto en la imagen interna al hacer hover */
+.tarjeta:hover img {
+    transform: scale(1); /* Zoom sutil a la imagen */
+}
+
+/* Mostrar el texto al hacer hover */
+.tarjeta:hover .descripcion {
+    bottom: 0; /* Sube a su posición */
+    opacity: 1; /* Se hace visible */
+}
+.contenedor-galeria.modo-zoom .tarjeta:not(.activa) {
+    /* Aplica el desenfoque */
+    filter: blur(8px) brightness(0.7); 
+    /* brightness(0.7) oscurece un poco el fondo para dar más contraste */
+    pointer-events: none; /* Evita que se pueda hacer clic en las borrosas */
+    transform: scale(0.95); /* Las hace un poquito más pequeñas para dar profundidad */
+}
+.herramientas {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 120px 1fr; 
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    padding: 10px 0;
+}
+.css-img {
+    width: 500%;
+    height: auto;
+    display: block;
+    margin: 20px 0 10px -120px ;
+    filter: drop-shadow(2px 10px 60px #028dff1b);
+}
+.html-img {
+
+    width: 300%;
+    height: auto;
+    display: block;
+    margin: auto;filter: drop-shadow(2px 10px 80px #f829041b);
+}
+
+    .js-img {
+        filter: drop-shadow(2px 10px 80px #ffff8913);
+        max-width: 520%;
+        margin-bottom: 22px;
+        margin: auto;
+        margin: 20px 0 10px -120px ;
+    }
+
+/* Texto + barra */
+.info {
+    width: 100%; 
+}
+
+.habilidad {
+    width: 10%;
+    font-size: 1.5em;
+    color: #e99a24;
+    font-weight: bold;
+    margin: auto;
+}
+
+/* Barra fondo */
+.barra {
+    margin: auto;
+    width: 40%;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* animaciones */
+.progreso {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+}
+
+.progreso.css {
+    --nivel: 60%;
+    background: linear-gradient(120deg, #024eff, #335fb2, #183372);
+    background-size: 200% 200%;
+    animation: cargar 2s ease-out forwards, liquido 2.5s ease-in-out infinite;
+    width: 60%; /* Fallback si la animación falla */
+}
+
+.progreso.html {
+    --nivel: 70%;
+    background: linear-gradient(120deg, #f83504, #c9481d, #530e08);
+    background-size: 200% 200%;
+    animation: cargar 2s ease-out forwards, liquido 2.5s ease-in-out infinite;
+    width: 70%;
+}
+
+.progreso.js {
+    --nivel: 20%;
+    background: linear-gradient(120deg, #ffb300, #ff6a00, #f04f4f);
+    background-size: 200% 200%;
+    animation: cargar 2s ease-out forwards, liquido 2.5s ease-in-out infinite;
+    width: 20%;
+}
+
+/* Animación keyframes (necesaria para que funcione) */
+@keyframes cargar {
+    from { width: 0; }
+    to { width: var(--nivel); }
+}
+@keyframes liquido {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- VERSIÓN MÓVIL  --- */
+@media (max-width: 800px) {
+
+    /* 1. Ajustar la barra de navegación (sticky box) */
+    .box {
+        width: 95%;       /* Un poco más pequeño para evitar scroll horizontal */
+        padding: 8px 2px; /* Menos relleno para que quepa todo */
+        top: 5px;         /* Más pegado al techo */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .ex, .link, summary {
+        font-size: 0.95em; /* Letra del menú más pequeña */
+    }
+
+    /* 2. Textos más legibles */
+    h1 {
+        font-size: 1.8em; /* Título menos gigante */
+    }
+    h2 {
+        font-size: 1.2em; /* Subtítulos más pequeños */
+    }
+
+    .text {
+        max-width: 80%; /* Que no sea tan estrecho */
+        width: 95%;   
+        text-align: left;
+        padding: 25px;    /* Menos relleno */
+        font-size: 1.05em;
+    }
+
+    /* 3. Ajustar la caja del móvil (reparación) */
+    .movil {
+        width: 95%;       /* Que ocupe casi todo el ancho */
+        padding: 10px;    /* Aprovechar espacio */
+    }
+
+    /* 4. Ajustar botones */
+    #action-btn {
+        width: 100%;      /* Botón de lado a lado es más fácil de pulsar con el dedo */
+        padding: 15px;    /* Más "gordo" para tocar fácil */
+        font-size: 1em;
+    }
+    
+    /* 5. Tabla de Hobbys (el desplegable) */
+    .dropdown-content {
+        min-width: 120px; /* Un poco más estrecho para que no se salga */
+        left: -20px;      /* Ajuste para que no se corte en el borde derecho */
+        transform: none;  /* Quitar el centrado perfecto anterior */
+    }
+
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns: 1fr ; /* 2 columnas iguales */
+        grid-template-rows: 1fr 1fr;    /* 2 filas iguales */
+        gap: 10px;                      /* Espacio entre imágenes */
+        width: 95%;                   /* Ancho del cuadrado total */
+        height: 80%;                  /* Alto del cuadrado total */
+        margin: 0 auto;                 /* Centrado en la página */
+        position: relative;
+    }
+    .descripcion {
+        position: absolute;
+        bottom: 0px;
+        left: -20px;
+        height: -20%;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.423); /* Fondo negro semitransparente */
+        color: #fff;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        opacity: 1;
+        transition: all 0.4s ease-in-out 0.1s;
+        z-index: 65;
+    }
+    .tarjeta.activa {
+    /* Truco para que ocupe todo el contenedor */
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        z-index: 10; /* Se pone por encima de las otras */
+        transform: scale(0.9); /* Un pequeño "pop" extra */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        border-radius: 12px;
+        animation: alternate;
+        
+    }
+    .tarjeta img {
+        width: 100%;
+        height: 100%;
+        object-fit:contain; /* La imagen cubre todo sin deformarse */
+        transition: transform 0.4s ease;
+        backface-visibility: hidden;
+    }
+    .tarjeta.activa img {
+        
+        transform: scale(1.1);
+        max-width: max-content;
+    }
+    .herramientas {
+        /* 1. Una sola columna en vez de dos */
+        grid-template-columns: 1fr;
+        
+        /* 2. Más ancho para aprovechar la pantalla del cel */
+        width: 90%; 
+        
+        /* 3. Centrar todo el contenido */
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Ajustar el icono */
+    .html-img{
+        filter: drop-shadow(2px 10px 40px #f8290487);
+        max-width: 37%; /* Un poco más pequeño para que no sea invasivo */
+        margin-bottom: 5px;
+    }
+
+    .css-img{
+        filter: drop-shadow(2px 10px 40px #028dff73);
+        max-width: 70%;
+        margin-bottom: 5px;
+        margin: auto;
+    }
+
+    .js-img {
+        filter: drop-shadow(2px 10px 40px #ffff8990);
+        max-width: 70%;
+        margin-bottom: 22px;
+        margin: auto;
+    }
+
+    .info {
+        margin-bottom: 40px; 
+    }
+
+    /* Centrar el texto de la habilidad */
+    .habilidad {
+        display: block; /* Para que ocupe todo el ancho y se pueda centrar */
+        font-size: 1.2em; /* Texto un poco más chico en móvil */
+    }
+}
+
+
+/* --- VERSIÓN Laptop  --- */
+@media (max-width: 1025px) {
+        /* 1. Ajustar la barra de navegación (sticky box) */
+    .box {
+        width: 95%;       /* Un poco más pequeño para evitar scroll horizontal */
+        padding: 8px 2px; /* Menos relleno para que quepa todo */
+        top: 5px;         /* Más pegado al techo */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .ex, .link, summary {
+        font-size: 0.95em; /* Letra del menú más pequeña */
+    }
+
+    /* 2. Textos más legibles */
+    h1 {
+        font-size: 1.8em; /* Título menos gigante */
+    }
+    h2 {
+        font-size: 1.2em; /* Subtítulos más pequeños */
+    }
+
+    .text {
+        max-width: 80%; /* Que no sea tan estrecho */
+        width: 95%;   
+        text-align: left;
+        padding: 25px;    /* Menos relleno */
+        font-size: 1.05em;
+    }
+    .sombra-organica {
+        width: 50%;
+    }
+}

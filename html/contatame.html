@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Contratame PLS!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #333, #000);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .meme-text {
+            font-size: clamp(2rem, 15vw, 6rem);
+            font-weight: 900;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .word {
+            display: inline-block;
+            animation: colorChange 2s infinite, bounce 1.5s infinite;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+        }
+
+        .word:nth-child(1) {
+            animation-delay: 0s;
+            color: #FF6B6B;
+        }
+
+        .word:nth-child(2) {
+            animation-delay: 0.2s;
+            color: #4ECDC4;
+        }
+
+        .word:nth-child(3) {
+            animation-delay: 0.4s;
+            color: #FFE66D;
+        }
+
+        .word:nth-child(4) {
+            animation-delay: 0.6s;
+            color: #A8E6CF;
+        }
+
+        .word:nth-child(5) {
+            animation-delay: 0.8s;
+            color: #FF8B94;
+        }
+
+        @keyframes colorChange {
+            0%, 100% {
+                color: inherit;
+                transform: scale(1);
+            }
+            50% {
+                color: #FFD700;
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .capybara {
+            margin-top: 40px;
+            font-size: 6rem;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Versión móvil */
+        @media (max-width: 768px) {
+            .meme-text {
+                gap: 5px;
+                letter-spacing: 4px;
+            }
+
+            .word {
+                animation: colorChange 2s infinite, bounce 1s infinite;
+            }
+
+            .capybara {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="meme-text">
+            <span class="word">CONTRATA</span>
+            <span class="word">ME</span>
+            <span class="word">PLS</span>
+            <span class="word">SOY</span>
+            <span class="word">BUENO</span>
+        </div>
+        <div class="capybara">🐹</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming</title>
+    <link rel="stylesheet" href="../css/gaming.css">
+    <meta name="description" content="Mr.caio - Desarrollador web y programador de software. Aprende HTML, CSS, sin mucha experiencia previa.">
+    <link rel="shortcut icon" href="/yo/logoi.png" sizes="256x256">
+    <link rel="icon" href="/yo/logoi.png" type="image/png" sizes="256x256">
+    <link rel="apple-touch-icon" sizes="180x180" href="/yo/apple-touch-icon-180x180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <a href="/yo/index.html">
+            <img src="/yo/logoi.png" alt="Logo" class="logo">
+        </a>
+    </div>
+    <div class="box">
+        <div class="ex"><a href="/yo/index.html" class="link act">Inicio</a></div>
+        <div class="ex">
+            <details class="dropdown">
+                <summary class="link">Hobbys</summary>
+                    <div class="dropdown-content">
+                        <table class="hobby-table">
+                            <tr>
+                                <td><a href="/yo/html/magia.html">Magia</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/yo/html/gimnasio.html">Gimnasio</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/yo/html/gaming.html">Gaming</a></td>
+                            </tr>
+                        </table>
+                    </div>
+            </details>
+        </div>
+<div> <a class="link" id="openModal" href="javascript:void(0)">Contacto</a></div>
+
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 style="margin-top: 0; color: #ff9900;">Contacto</h2>
+        <div class="contact-info">
+            <p><strong>📧 Gmail:</strong> <br> <a href="mailto:caiopra1@gmail.com">caiopra1@gmail.com</a></p>
+            <p><strong>📞 Teléfono:</strong> <br> <a href="tel:+34643630415">+34 643 630 415</a></p>
+        </div>
+    </div>
+</div>        <div> <a class="link" href="/yo/html/contatame.html">$#C#+</a></div>
+        </div>
+    <div class="text-container">
+        <div class="text-gaming">
+            <h1 class="Style1">Gaming</h1>
+            <p>El gaming es más que entretenimiento para mí, es una pasión que combina estrategia, creatividad y competencia. Desde mis primeros días jugando, he descubierto mundos fascinantes que desafían mi mente y me mantienen constantemente aprendiendo.</p>
+            <p>Cada juego presenta retos únicos que me enseñan a pensar rápido, adaptarme a nuevas situaciones y trabajar en equipo. Los videojuegos me han permitido conectar con personas de todo el mundo, compartir experiencias y disfrutar de narrativas increíbles que expanden mi imaginación.</p>
+            <p>La experiencia gaming me ha proporcionado lecciones valiosas sobre perseverancia, resolución de problemas y la importancia de disfrutar del proceso. Es un equilibrio perfecto entre diversión y desarrollo personal que complementa mi vida tecnológica.</p>
+        </div>
+    </div>
+
+    <!-- JUEGO DEL DINOSAURIO -->
+    <div id="game-wrap">
+        <div id="game-container">
+            <div id="background"></div>
+            <div id="ground"></div>
+            
+            <div id="dino-container">
+                <div id="dino-run"></div>
+                <div id="dino-jump"></div>
+            </div>
+            
+            <div id="cactus-container"></div>
+            
+            <div id="score">Score: 0</div>
+            <div id="high-score">High Score: 0</div>
+            
+            <div id="controls">
+                <div id="start-message">Presiona ESPACIO o CLIC para saltar</div>
+                <div id="mobile-controls" class="hidden">
+                    <button id="jump-btn">SALTAR</button>
+                    <button id="pause-btn">PAUSA</button>
+                </div>
+            </div>
+            
+            <div id="game-over-screen" class="hidden">
+                <h2>¡GAME OVER!</h2>
+                <p id="final-score">Puntuación: 0</p>
+                <button id="restart-btn">REINTENTAR</button>
+            </div>
+        </div>
+    </div>
+    <!-- FIN JUEGO -->
+    <script src="/yo/scrit/script.js"></script>
+    <script src="/yo/scrit/dino.js"></script>
+</body>
+</html>

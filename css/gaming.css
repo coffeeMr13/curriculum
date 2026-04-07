@@ -1,0 +1,566 @@
+body {
+            margin: 20px;
+            padding: 0;
+            color: #333333;
+            background: linear-gradient(to bottom, #333, #000);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+.box {
+            width: 99%;
+            margin: 20px auto;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around; /* Mejor que space-between para menús */
+            align-items: flex-start; /* Alinea los items arriba */
+            border-radius: 13px;
+            box-shadow: 0 0 55px #101010;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            background-color:#4caf50; /* Un poco transparente */
+            backdrop-filter: blur(4px); /* Efecto borroso estilo iOS/Windows 11 */
+        }
+
+        .link {
+            text-decoration: none;
+            color: #ffd971;
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.25s ease;
+        }
+
+        /* Contenido oculto */
+.dropdown-content {
+    margin-top: 8px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 1.25s ease;
+}
+
+/* Cuando está abierto */
+details[open] .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+        .dropdown {
+    position: relative;
+        }
+        summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: bold;
+            color: #F4511E;
+            font-size:1em;
+        }
+        summary::-webkit-details-marker {
+    display: none;
+        }
+.link:hover {
+    color: #ebe7e7;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    transform: scale(1.08);
+    transform: color 0.3s ease;
+}
+
+        /* Estilos específicos para la tabla desplegable */
+        details {
+            position: relative;
+        }
+
+        .hobby-table {
+            margin-top: 10px;
+            background: #fff;
+            border-radius: 8px;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 150px;
+            height: 162px;
+        }
+
+        .hobby-table td {
+    padding: 0; 
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-align:start;
+    overflow: hidden;
+    }
+    .hobby-table td a {
+    display: block;  /* Hace que el enlace sea un bloque solido */
+    width: 100%;     /* Ocupa todo el ancho */
+    height: 100%;    /* Ocupa todo el alto */
+    padding: 12px;   /* Ponemos el padding AQUÍ en lugar de en el td */
+    text-decoration: none; /* Quita el subrayado si lo tiene */
+    color: inherit;  /* Hereda el color del texto */
+    }
+
+        /* Quitar la flecha por defecto de Chrome/Safari (opcional) */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        /* Contenedor del desplegable */
+.dropdown {
+    position: relative; /* Necesario para que el hijo se posicione respecto a esto */
+    display: inline-block;
+}
+
+/* La caja que contiene la tabla */
+.dropdown-content {
+    backdrop-filter: blur(4px); /* Efecto borroso */
+    transform-origin: 10% 0%; /* Punto de origen para animaciones */
+    position: absolute;  /* Hace que flote delante */
+    top: 100%;           /* Aparece justo debajo del texto 'Hobbys' */
+    left: 10%;           /* Lo centramos respecto al texto */
+    transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
+    z-index: 100;        /* Asegura que esté por encima de todo */
+    background-color: rgba(80, 78, 78, 0.804);
+    min-width: 150px;    /* Ancho mínimo de la tablita */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.731);
+    border-radius: 8px;
+    margin-top: 13px;    /* Separación de la barra naranja */
+    overflow: hidden;    /* Para que los bordes redondeados corten la tabla */
+    transition: all 0.6s;
+    backdrop-filter: sepia(90%);
+}
+
+.hobby-table tr:last-child td {
+    border-bottom: none;
+
+}
+
+/* Opcional: cambio de color al pasar el mouse por cada hobby */
+.hobby-table tr:hover {
+    border-radius: 8px;
+    background-color: #bbb;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1 {
+    font-variant: normal;
+    font-size: 300%;
+    color: #ff9800;
+    text-shadow: #000 1px 1px 4px;
+    text-align: center;
+    text-wrap: balance;
+}
+.logo:hover {
+    
+    transform: scale(1.2); /* Efecto de crecimiento */
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 100px #ffff89);
+}
+.logo {
+    padding: 1px;
+    display: block;
+    margin: 1px auto;
+    width: 100px;
+    height: auto;
+    
+}
+
+h2, h3 {
+    margin: 10px 0;
+}
+
+
+
+.text-container {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.text-gaming {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.text-gaming p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* JUEGO DEL DINOSAURIO */
+#game-wrap {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border: 3px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 100%);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Fondo */
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Nubes */
+.cloud {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    filter: blur(2px);
+    z-index: 1;
+    animation: cloudMove 20s linear infinite;
+}
+
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    left: 8px;
+}
+
+.cloud::after {
+    width: 35px;
+    height: 35px;
+    top: -15px;
+    right: 8px;
+}
+
+@keyframes cloudMove {
+    0% { right: -100px; }
+    100% { right: 100%; }
+}
+
+/* --- ESTILOS DEL MODAL DE CONTACTO --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 3000; /* Por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px); 
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid #ff9900;
+    width: 85%;
+    max-width: 350px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 50px rgba(255, 153, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #e99a24;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Suelo */
+#ground {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 30px;
+    background: #654321;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #654321 0px,
+        #654321 10px,
+        #543210 10px,
+        #543210 20px
+    );
+    z-index: 3;
+}
+
+/* Contenedor del dinosaurio */
+/* bottom se controla desde JS para que la hitbox coincida exactamente */
+#dino-container {
+    position: absolute;
+    bottom: 30px;      /* valor inicial; JS lo sobreescribe en el salto */
+    left: 50px;
+    width: 60px;
+    height: 70px;
+    z-index: 10;
+    will-change: bottom;   /* avisa al navegador de que bottom cambiará */
+    border: blue solid 0px; /* Para depuración, se quita en producción */
+}
+
+/* Dinosaurio corriendo */
+#dino-run {
+    position: absolute;
+    top: 23px;
+    left: -12px;           /* ajuste fino para centrar el sprite */
+    width: 200%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Dinosaurio saltando */
+#dino-jump {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+/* Cuando #dino-container tiene clase .jumping */
+.jumping #dino-run  { display: none; }
+.jumping #dino-jump { display: block; }
+/* La animación del salto la hace JS moviendo bottom,
+   así que NO hay @keyframes dinoJump aquí */
+
+/* Contenedor de cactus */
+#cactus-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    height: 100px;
+    z-index: 5;
+}
+
+/* Cactus */
+.cactus {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 91px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    right: -50px;
+    border: red solid 0px; /* Para depuración, se quita en producción */
+}
+
+.double-cactus {
+    width: 50px;
+}
+
+/* Puntuaciones */
+#score, #high-score {
+    position: absolute;
+    top: 10px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 20;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+#score { left: 10px; }
+#high-score { right: 10px; }
+
+/* Controles */
+#controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 20;
+}
+
+#controls > * {
+    pointer-events: auto;
+}
+
+/* Controles móviles */
+#mobile-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 25;
+}
+
+#mobile-controls button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #4CAF50 0%, #2E7D32 100%);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    transition: transform 0.1s;
+}
+
+#mobile-controls button:active {
+    transform: scale(0.95);
+}
+
+/* Pantalla de Game Over */
+#game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 100;
+    border: 4px solid #FF5252;
+    min-width: 300px;
+    backdrop-filter: blur(5px);
+}
+
+#game-over-screen h2 {
+    color: #FF5252;
+    margin: 0 0 20px 0;
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(255, 82, 82, 0.5);
+}
+
+#game-over-screen p {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#game-over-screen button {
+    margin: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+#restart-btn {
+    background: linear-gradient(to bottom, #4CAF50 0%, #2E7D32 100%);
+    color: white;
+}
+
+#game-over-screen button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Mensaje de inicio */
+#start-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    z-index: 50;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Clase para ocultar elementos */
+.hidden { 
+    display: none !important; 
+}
+
+/* Efecto de golpe */
+@keyframes hitFlash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #game-container {
+        height: 200px;
+        max-width: 95%;
+    }
+    
+    #dino-container {
+        left: 30px;
+        width: 50px;
+        height: 60px;
+    }
+    
+    .cactus {
+        width: 25px;
+        height: 60px;
+    }
+    
+    #score, #high-score {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+    
+    #start-message {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
