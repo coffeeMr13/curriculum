@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mr.caio</title>
+        <link rel="stylesheet" href="/yo/css/css inicio.css">
+        <meta name="description" content="Mr.caio - Desarrollador web y programador de software. Aprende HTML, CSS, sin mucha experiencia previa.">
+        <link rel="shortcut icon" href="/yo/logoi.png" sizes="256x256">           <!-- HTML4 (Legacy) -->
+        <link rel="icon" href="/yo/logoi.png" type="image/png"  sizes="256x256">    <!-- HTML5 -->
+        <link rel="apple-touch-icon" sizes="180x180"
+        href="/yo/apple-touch-icon-180x180.png">                 <!-- iPhone/iPad -->
+        <link rel="shortcut icon" href="/yo/logoi.png" />
+    </head>
+<body>
+    <div>
+        <a href="/yo/index.html">
+            <img src="/yo/logoi.png" alt="Logo" class="logo">
+        </a>
+    </div>
+    <div class="box">
+        <div class="ex"><a href="/yo/index.html" class="link act">Inicio</a></div>
+        <div class="ex">
+            <details class="dropdown">
+                <summary class="link">Hobbys</summary>
+                    <div class="dropdown-content">
+                        <table class="hobby-table">
+                            <tr>
+                                <td><a href="/yo/html/magia.html">Magia</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/yo/html/gimnasio.html">Gimnasio</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="/yo/html/gaming.html">Gaming</a></td>
+                            </tr>
+                        </table>
+                    </div>
+            </details>
+        </div>
+        <div> <a class="link" id="openModal" href="javascript:void(0)">Contacto</a></div>
+
+        <div> <a class="link" id="openModal" href="javascript:void(0)">Contacto</a></div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="margin-top: 0; color: #ff9900;">Contacto</h2>
+            <div class="contact-info">
+                <p><strong>📧 Gmail:</strong> <br> <a href="mailto:caiopra1@gmail.com">caiopra1@gmail.com</a></p>
+                <p><strong>📞 Teléfono:</strong> <br> <a href="tel:+34643630415">+34 643 630 415</a></p>
+            </div>
+        </div>
+    </div>
+        <div> <a class="link" href="/yo/html/contatame.html">$#C#+</a></div>
+    </div>
+    <div class="text"> 
+        <h1>Bienvenido a mi página web</h1>
+        <h2>Solucionador de problemas por naturaleza. Entusiasta de la tecnología por vocación.</h2>
+        <p>Tengo 18 años y una obsesión: entender cómo funcionan las cosas para poder llevarlas al siguiente nivel. Desde la delicadeza de una <strong>microsoldadura</strong> en un móvil hasta el despliegue de un <strong>modelo 3D</strong> o un <strong>script de código</strong>, mi formación es autodidacta, rápida y constante. Si tiene circuitos, cables o píxeles, puedo trabajar con ello.</p>
+        <p>¡Explora mi sitio y descubre todo lo que tengo para ofrecer!</p>
+    </div>
+    <div>
+        <h3>Uno de mis reparación</h3>
+        <p class="movil-text">Aquí puedes ver cómo se realiza una reparación de móvil que he hecho.</p>
+    </div>
+    <div class="movil">
+        <div id="gallery-container">
+            <img src="/yo/imagen,video/rotom.jpg" alt="Móvil con pantalla rota" class="media-item active">
+            
+            <img src="/yo/imagen,video/areglandom.jpg" alt="Proceso de reparación" class="media-item">
+            
+            <video src="/yo/imagen,video/terminado.mp4" muted autoplay class="media-item" id="final-video" controls></video>
+        </div>
+
+        <div class="controls">
+            <p id="status-text">Este móvil llegó destrozado...</p>
+            <button id="action-btn" onclick="nextStep()">🛠️ Iniciar Reparación</button>
+        </div>
+    </div>
+    <div>
+        <h2 class="sombra-organica">Programas que sé manejar</h2>
+    </div>
+    <div class="contenedor-galeria" id="miGaleria">
+        <div class="tarjeta">
+            <img src="/yo/imagen,video/Blender.png" alt="Blender">
+        <div class="descripcion">Blender 3D</div>
+        </div>
+        <div class="tarjeta">
+            <img src="/yo/imagen,video/photopea.png" alt="photopea">
+        <div class="descripcion">Photopea Editor</div>
+    </div>
+    <div class="tarjeta">
+        <img src="/yo/imagen,video/Adoble After Effects.png" alt="Adobe After Effects">
+        <div class="descripcion">After Effects</div>
+    </div>
+        <div class="tarjeta">
+            <img src="/yo/imagen,video/word-excel-powerpoint.png"   alt="Office Suite">
+            <div class="descripcion">Office Suite</div>
+        </div>
+    </div>
+    <div>
+<h3>Lenguajes de programación que utilizo</h3>
+
+<div class="herramientas">
+    <img class="css-img" src="/yo/imagen,video/css-3.png" alt="CSS">
+    
+    <div class="info">
+        <p class="habilidad">CSS</p>
+        <div class="barra">
+            <div class="progreso css" style="--nivel: 60%"></div>
+        </div>
+    </div>
+
+    <img class="html-img" src="/yo/imagen,video/html.png" alt="HTML">
+    
+    <div class="info">
+        <p class="habilidad">HTML</p>
+        <div class="barra">
+            <div class="progreso html" style="--nivel: 70%"></div>
+        </div>
+    </div>
+    <img class="js-img" src="/yo/imagen,video/JavaScript-Symbol.png" alt="JavaScript">
+    <div>
+        <p class="habilidad">JavaScript</p>
+        <div class="barra">
+            <div class="progreso js" style="--nivel: 20%"></div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p>© 2026 Mr.caio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/yo/scrit/script.js"></script>
+</body>
+</html>
