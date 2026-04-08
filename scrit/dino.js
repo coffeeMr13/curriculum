@@ -18,7 +18,7 @@ const gameContainer   = document.getElementById("game-container");
 
 // ─── Rutas de imágenes ────────────────────────────────────────────────────────
 // encodeURIComponent convierte los espacios en %20 y evita los 404
-const IMG_PATH = '/yo/imagen/';
+const IMG_PATH = '../imagen/';
 function img(name) {
     return IMG_PATH + encodeURIComponent(name);
 }
